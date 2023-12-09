@@ -1,6 +1,6 @@
 function saludar() {
   let nombre = prompt("Ingrese su nombre");
-  alert(nombre + ", Bienvenido/a a EyE Indumentaria!");
+  alert(nombre + ", Bienvenido/a a EyE INDUMENTARIA!");
 }
 saludar();
 
