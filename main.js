@@ -18,10 +18,19 @@ if (metodoPago === 1) {
   incremento = 0.10; // Aplicar incremento del 10% para pago con tarjeta
 } else {
 
-  while (metodoPago !== 1 && metodoPago !== 2) {
-    metodoPago = parseInt(prompt("Método de pago inválido. Ingrese el método de pago nuevamente (1 para efectivo, 2 para tarjeta)"));
-  }
+  do {
+    metodoPago = parseInt(prompt("Ingrese el método de pago (1 para efectivo, 2 para tarjeta)"));
+    
+    if (metodoPago !== 1 && metodoPago !== 2) {
+      alert("Método de pago inválido. Por favor, ingrese el método de pago nuevamente.");
+    }
+  } while (metodoPago !== 1 && metodoPago !== 2);
 }
+
+
+
+
+
 
 let importeTotal = valorProducto - (valorProducto * descuento) + (valorProducto * incremento);
 
@@ -45,3 +54,5 @@ function despedir() {
   alert("¡MUCHAS GRACIAS POR SU COMPRA!. Vuelva Pronto");
 }
 despedir();
+
+
